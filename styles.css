@@ -1,0 +1,302 @@
+body {
+  box-sizing: border-box;
+  background-image: url('/image/Background\ image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.line {
+  margin-top: 2%;
+  width: 20%;
+  height: 6px;
+  background-color: #007FFF;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.weather-forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.weather-text {
+  color: #0c7ceb;
+  font-weight: bold;
+  font-size: 3rem; /* Increased font size */
+  text-align: center;
+}
+
+.forecast-text {
+  margin-left: 2px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem; /* Increased font size */
+  text-align: center;
+}
+
+#result-button {
+  width: 150px;
+  background-color: #007FFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 50px; /* Increased button size */
+  font-size: 1.5rem; /* Increased font size */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#result-button:hover {
+  background-color: #08539f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#city-input {
+  width: 50%;
+  max-width: 400px;
+  padding: 15px;
+  font-size: 1.5rem; /* Increased font size */
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  margin: 20px 0;
+}
+
+::placeholder {
+  font-size: 1.2rem; /* Increased font size */
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 4rem; /* Increased font size */
+}
+
+#weather-container {
+  background-color: transparent;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  margin-top: 3%;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+#weather-container .des-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#weather-container .description {
+  margin-right: 20px;
+}
+
+#weather-container img {
+  width: 70px;/* Increased image size */
+  height: 70px;
+  object-fit: cover;
+}
+
+.center-day {
+  margin: 20px auto;
+  background-color: #08539f;
+  width: 60%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem; /* Increased font size */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.style-city {
+  margin-left: 75%;
+  font-size: 1.2rem; 
+  font-weight: bold;
+  color: white;
+}
+
+.style-image {
+ margin: 0px auto;
+  width: 40px;
+  display: inline-block;
+}
+
+.thd-container {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-weight: bold;
+  margin-top: -20px;
+  align-items: center;
+}
+
+
+#reset-button{
+  display: none;
+    width: 150px;
+    background-color: #007FFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px; /* Increased button size */
+    font-size: 1.5rem; /* Increased font size */
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+@media (min-width: 768px) {
+  .weather-forecast {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  #result-button {
+    margin-left: 20px;
+    font-size: 2rem;
+    width: 180px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .line {
+    width: 25%;
+  }
+
+  #result-button {
+    width: 200px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .weather-text, .forecast-text {
+    font-size: 3rem;
+  }
+
+  #city-input {
+    font-size: 2rem;
+    width: 60%;
+  }
+
+  #weather-container {
+    width: 80%;
+  }
+
+  .center-day {
+    font-size: 2.5rem;
+  }
+}
+
+
+
+/*Snow flakes styles gotten CGPT prompt.*/
+
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  font-size: 1rem;
+  color: white;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+/* Snowflake Animation */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0.5;
+  }
+}
+
+/* Generate Multiple Snowflakes */
+@keyframes drift {
+  0% {
+    transform: translateX(10);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Create multiple snowflakes dynamically */
+.snowflake:nth-child(1) {
+  left: 5%;
+  animation-duration: 2s, 3s;
+  animation-name: fall, drift;
+}
+
+.snowflake:nth-child(2) {
+  left: 20%;
+  animation-duration: 7s, 4s;
+  animation-name: fall, drift;
+  width: 100px;
+}
+
+.snowflake:nth-child(3) {
+  left: 35%;
+  animation-duration: 2s, 35.5s;
+  animation-name: fall, drift;
+}
+
+.snowflake:nth-child(4) {
+  left: 50%;
+  animation-duration: 8s, 5s;
+  animation-name: fall, drift;
+}
+
+.snowflake:nth-child(5) {
+  left: 65%;
+  animation-duration: 2.5s, 3.2s;
+  animation-name: fall, drift;
+}
+
+.snowflake:nth-child(6) {
+  left: 80%;
+  animation-duration: 9s, 6s;
+  animation-name: fall, drift;
+}
+
+.snowflake:nth-child(7) {
+  left: 90%;
+  animation-duration: 5.5s, 3.8s;
+  animation-name: fall, drift;
+}
