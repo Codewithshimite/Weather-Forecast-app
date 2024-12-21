@@ -161,8 +161,8 @@ h1 {
   font-weight: 120px;
 }
 
-#reset-button{
-  display: none;
+#reset-button {
+    display: none;
     width: 150px;
     background-color: #007FFF;
     color: white;
