@@ -134,10 +134,11 @@ h1 {
   color: white;
 }
 
-.style-image {
- margin: 0px auto;
-  width: 40px;
-  display: inline-block;
+.style-error{
+  color: red;
+  font-size: 18px;
+  font-weight: 120px;
+  margin-top: 80px;
 }
 
 .thd-container {
