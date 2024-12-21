@@ -97,6 +97,12 @@ h1 {
   
 }
 
+.style-error{
+  color: white;
+  font-size: 18px;
+  font-weight: 120px;
+}
+
 #weather-container .des-img {
   display: flex;
   align-items: center;
