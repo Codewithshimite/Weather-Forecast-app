@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
- background-image: url('./image/Background image.jpg');
+  background-image: url('/image/Background-image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -97,12 +97,6 @@ h1 {
   
 }
 
-.style-error{
-  color: white;
-  font-size: 18px;
-  font-weight: 120px;
-}
-
 #weather-container .des-img {
   display: flex;
   align-items: center;
@@ -161,6 +155,12 @@ h1 {
 }
 
 
+.style-error{
+  color: white;
+  font-size: 18px;
+  font-weight: 120px;
+}
+
 #reset-button{
   display: none;
     width: 150px;
@@ -173,6 +173,8 @@ h1 {
     font-size: 1.5rem; /* Increased font size */
     transition: background-color 0.3s, box-shadow 0.3s;
   }
+
+
 
 @media (min-width: 768px) {
   .weather-forecast {
@@ -222,8 +224,6 @@ h1 {
 }
 
 
-
-/*Snow flakes styles gotten CGPT prompt.*/
 
 
 .snowflake {
@@ -275,4 +275,3 @@ h1 {
   left: 90%;
   animation-duration: 5.5s, 3s;
 }
-
