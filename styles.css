@@ -221,82 +221,52 @@ h1 {
 
 
 .snowflake {
-  position: absolute;
-  top: -10px;
-  font-size: 1rem;
-  color: white;
-  opacity: 0.8;
-  animation: fall linear infinite;
+  color: snow;
+  position: fixed; /* Ensure snowflakes are not in document flow */
+  top: -10px; /* Start above the viewport */
+  left: 50%; /* Initial horizontal position */
+  width: 60px;
+  height: 10px;
+  
+  border-radius: 50%; /* Circular snowflakes */
+  opacity: 0.8; /* Slight transparency */
+  animation: fall 5s linear infinite, sway 3s ease-in-out infinite;
 }
 
-/* Snowflake Animation */
 @keyframes fall {
   0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 1;
+    transform: translateY(10px); /* Start at top of viewport */
   }
   100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0.5;
+    transform: translateY(100vh); /* Move to the bottom of viewport */
   }
 }
 
-/* Generate Multiple Snowflakes */
-@keyframes drift {
-  0% {
-    transform: translateX(10);
-  }
-  50% {
-    transform: translateX(50px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 
-/* Create multiple snowflakes dynamically */
+
+/* Randomize left positions and animation durations */
 .snowflake:nth-child(1) {
-  left: 5%;
-  animation-duration: 2s, 3s;
-  animation-name: fall, drift;
+  left: 10%;
+  animation-duration: 4s, 2s;
 }
 
 .snowflake:nth-child(2) {
-  left: 20%;
-  animation-duration: 7s, 4s;
-  animation-name: fall, drift;
-  width: 100px;
+  left: 30%;
+  animation-duration: 5s, 3s;
 }
 
 .snowflake:nth-child(3) {
-  left: 35%;
-  animation-duration: 2s, 35.5s;
-  animation-name: fall, drift;
+  left: 50%;
+  animation-duration: 6s, 2.5s;
 }
 
 .snowflake:nth-child(4) {
-  left: 50%;
-  animation-duration: 8s, 5s;
-  animation-name: fall, drift;
+  left: 70%;
+  animation-duration: 4.5s, 3.5s;
 }
 
 .snowflake:nth-child(5) {
-  left: 65%;
-  animation-duration: 2.5s, 3.2s;
-  animation-name: fall, drift;
-}
-
-.snowflake:nth-child(6) {
-  left: 80%;
-  animation-duration: 9s, 6s;
-  animation-name: fall, drift;
-}
-
-.snowflake:nth-child(7) {
   left: 90%;
-  animation-duration: 5.5s, 3.8s;
-  animation-name: fall, drift;
+  animation-duration: 5.5s, 3s;
 }
+
