@@ -24,11 +24,15 @@ document.addEventListener('keydown', function(event) {
 
 //if  city input in empy then it should aler
 resultIndex.addEventListener("click", function() {
-  if (cityInput.value === "") {
-    alert("Please Enter a City Name");
-    return;
+  if (cityInput.value.trim() === "")  {
+   weatherContainer.innerHTML = `<div class="style-error">Please enter a city name</div>`
+    cityInput.value = '';
+    return
+  }if(!isNaN(cityInput.value)){
+   weatherContainer.innerHTML = `<div class="style-error">Opps! sorry enter alphabets only</div>`
+    cityInput.value = '';
+    return
   }
-
 
   //This is my API key
   const apiKey = "6e1977dfcff8a498c0eab749941e7581";
@@ -67,10 +71,9 @@ resultIndex.addEventListener("click", function() {
         </div>
       `;
     })
-    .catch((error) => console.error("Error:", error));
+    
+    .catch((error) => error = weatherContainer.innerHTML = `<div class="style-error">Opps!Enter valid city name</div>`);
     resultIndex.style.display = "none";
     reset.style.display = "block"
 
 });
-
-
