@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
- background-image: url('/image/Background-image.jpg'
+  background-image: url('/image/Background-image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -155,14 +155,14 @@ h1 {
 }
 
 
-.style-error {
+.style-error{
   color: white;
   font-size: 18px;
   font-weight: 120px;
 }
 
-#reset-button {
-    display: none;
+#reset-button{
+  display: none;
     width: 150px;
     background-color: #007FFF;
     color: white;
